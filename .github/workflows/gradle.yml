@@ -34,15 +34,15 @@ jobs:
         with:
          repository: tahiat/specimin-evaluation
          ref: test
-         path: specimin-evaluation
+         path: ./specimin-evaluation
       - name: Run evaluation script
         run: |
           cd specimin-evaluation
           echo "specimin path-> $SPECIMIN"
           echo "content of $SPECIMIN"
-          ls $SPECIMIN
+          ls -la $SPECIMIN
           echo "content of /home/runner/work/specimin"
-          ls /home/runner/work/specimin
+          ls -la /home/runner/work/specimin
           python main.py
       - name: Check evaluation status
         run: diff -uw src/main/resources/target_status.json specimin-evaluation/ISSUES/target_status.json
