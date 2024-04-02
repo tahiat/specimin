@@ -34,7 +34,7 @@ jobs:
         with:
          repository: tahiat/specimin-evaluation
          ref: test
-         path: ./specimin-evaluation
+         path: ../specimin-evaluation
       - name: Run evaluation script
         run: |
           cd specimin-evaluation
