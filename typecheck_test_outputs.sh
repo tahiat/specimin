@@ -4,7 +4,7 @@
 # It returns 2 if any of them fail to compile, 1 if there are any malformed test directories,
 # and 0 if all of them do compile.
 #
-# It is desirable that all of the expected test outputs compile, because Specimin
+# It is desirable that all of the expected test outputs compile, because SpecSlice
 # should produce independently-compilable programs.
 
 returnval=0

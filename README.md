@@ -1,17 +1,17 @@
-# Specimin: the specification slicer
+# SpecSlice: the specification slicer
 
-**Note: Specimin is a work in progress, and is not yet fully functional. Please check
+**Note: SpecSlice is a work in progress, and is not yet fully functional. Please check
 back later or contact the authors if you want to use the tool.**
 
-This document describes **Specimin** (SPECIfication MINimizer).
-Specimin's goal is, given a Java Program *P*
+This document describes **SpecSlice** (SPECIfication MINimizer).
+SpecSlice's goal is, given a Java Program *P*
 and a set of methods in that program *M*, produce a compilable, dependency-free
 version of *P* that contains (1) the body of each method in *M*
 and (2) as little else as possible while preserving the specifications
 (i.e., the signatures of methods, the structure of classes, etc.) used
 in the methods in *M*.
 
-Specimin’s goal is to “stub out” everything that’s used by
+SpecSlice’s goal is to “stub out” everything that’s used by
 the target method(s), for the purpose of static analysis of the methods
 in the target set.
 
@@ -27,7 +27,7 @@ The available options are (required options in **bold**, repeatable options in *
 * ***--targetMethod***: a target method that must be preserved, and whose dependencies should be stubbed out. Use the format `class.fully.qualified.Name#methodName(Param1Type, Param2Type, ...)`. Note: If a target method has a receiver parameter, i.e., (.. this), exclude that parameter from the signature. Check this [documentation](https://docs.oracle.com/javase/specs/jls/se8/html/jls-8.html#jls-ReceiverParameter) for more info.
 
 * **--outputDirectory**: the directory in which to place the output. The directory must be writeable and will be created if it does not exist.
-* **--jarPath**: a directory path that contains all the jar files for Specimin to take as input.
+* **--jarPath**: a directory path that contains all the jar files for SpecSlice to take as input.
 
 
 Options may be specified in any order. When supplying repeatable options more than once, the option must be repeated for each value.
@@ -36,7 +36,7 @@ Here is a sample command to run the tool: `./gradlew run --args='--outputDirecto
 
 # Input/output examples
 
-The following examples illustrate the kinds of programs that Specimin
+The following examples illustrate the kinds of programs that SpecSlice
 produces.
 
 ## A very simple example
@@ -56,7 +56,7 @@ class Foo {
 }
 ```
 
-Suppose that the user asks Specimin to target the method `bar()`.
+Suppose that the user asks SpecSlice to target the method `bar()`.
 The result should be the following program:
 
 ```
@@ -73,11 +73,11 @@ class Foo {
 ```
 
 Note how `baz()`’s body has been replaced with `throw new Error()` -
-this is the sort of transformation that Specimin should do to any
+this is the sort of transformation that SpecSlice should do to any
 method that isn’t a target, but is used. The result of this change
 has an identical specification to the original - annotations and types
 will be preserved - but its behavior is empty. This illustrates that
-Specimin is not intended to produce runnable output: its output is only
+SpecSlice is not intended to produce runnable output: its output is only
 usefule for static analysis.
 
 If the target had been `baz()` instead of `bar()`, then `bar()` would
@@ -124,9 +124,9 @@ class Baz extends Object {
 ```
 
 This should be the result, regardless of whether `Baz` was originally
-defined in the original program or in a library, because Specimin is
+defined in the original program or in a library, because SpecSlice is
 supposed to generate a dependency-free version of the target
-program. That said, Specimin does need to respect the specification of
+program. That said, SpecSlice does need to respect the specification of
 `Baz` - for example, if `Baz` has a superclass other than `Object`, that
 superclass needs to be included, too. For example, the result could
 have replaced the contents of `Baz.java` with the following, if that had
@@ -177,7 +177,7 @@ at the specification level - including types, generics, superclasses,
 implemented interfaces, annotations, etc. - the resulting program should
 be the same as the original (with “dead” code that isn’t used by the
 target method(s) removed, of course). But, at the implementation level,
-nothing has to work - recall that Specimin’s goal is basically to
+nothing has to work - recall that SpecSlice’s goal is basically to
 “stub out” everything that’s used by the target method.
 
 ## Annotations
@@ -197,7 +197,7 @@ class Foo {
 }
 ```
 
-It is required that Specimin preserves annotations (especially type
+It is required that SpecSlice preserves annotations (especially type
 annotations, but all annotations are supposed to be preserved) on
 elements of the target program that will appear in the output.
 
@@ -218,11 +218,11 @@ class Foo {
  }
  ```
 
-Given that our specification for Specimin says that the produced
+Given that our specification for SpecSlice says that the produced
 program should have no dependencies, should the generated program
 include a (fake) implementation for `java.util.List`? This question is
 tricky to answer. On the one hand, doing so is (1) more consistent
-with Specimin’s treatment of other libraries, and (2) will make the
+with SpecSlice’s treatment of other libraries, and (2) will make the
 resulting programs self-contained, which will make them easier to
 annotate later, if desired. On the other hand, generating stubbed
 variants of standard library methods and classes might be problematic:
@@ -231,7 +231,7 @@ into the JVM (`Object`, `String`, a few others?  Definitely not that many,
 though.), and (2) it will require the resulting program to be compiled
 with unusual options, (i.e. `-Xbootclasspath=` the empty set or some
 such nonsense), which would limit its suitability for generating test
-cases. For now, I think this specification should permit Specimin to
+cases. For now, I think this specification should permit SpecSlice to
 do either.
 
 TODO: decide which of these modes to support, or add support for both
