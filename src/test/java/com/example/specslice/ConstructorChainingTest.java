@@ -3,7 +3,7 @@ package com.example.specslice;
 import java.io.IOException;
 import org.junit.Test;
 
-/** This test checks that Specimin preserves the right constructors in a constructor chain. */
+/** This test checks that SpecSlice preserves the right constructors in a constructor chain. */
 public class ConstructorChainingTest {
   @Test
   public void runTest() throws IOException {

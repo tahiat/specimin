@@ -4,7 +4,7 @@ import java.io.IOException;
 import org.junit.Test;
 
 /**
- * This test checks that if Specimin will work properly where there is a super variables call while
+ * This test checks that if SpecSlice will work properly where there is a super variables call while
  * the parent class file is not in the root directory physically
  */
 public class HiddenSuperFieldAndUnsolvedLocal {

@@ -3,7 +3,7 @@ package com.example.specslice;
 import java.io.IOException;
 import org.junit.Test;
 
-/** This test makes sure that Specimin will not crash if an interface contains unsolved symbols. */
+/** This test makes sure that SpecSlice will not crash if an interface contains unsolved symbols. */
 public class InterfaceWithUnsolvedSymbols {
   @Test
   public void runTest() throws IOException {

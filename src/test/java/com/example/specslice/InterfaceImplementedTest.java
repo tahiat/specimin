@@ -3,7 +3,7 @@ package com.example.specslice;
 import java.io.IOException;
 import org.junit.Test;
 
-/** This test checks if Specimin can properly remove unused method signatures from an interface. */
+/** This test checks if SpecSlice can properly remove unused method signatures from an interface. */
 public class InterfaceImplementedTest {
   @Test
   public void runTest() throws IOException {

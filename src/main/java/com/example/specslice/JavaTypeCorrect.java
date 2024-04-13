@@ -123,7 +123,7 @@ class JavaTypeCorrect {
   public void runJavacAndUpdateTypes(String filePath) {
     Path outputDir;
     try {
-      outputDir = Files.createTempDirectory("specimin-javatypecorrect");
+      outputDir = Files.createTempDirectory("specslice-javatypecorrect");
     } catch (IOException e) {
       throw new RuntimeException("failed to create a temporary directory");
     }
@@ -168,7 +168,7 @@ class JavaTypeCorrect {
         // interface. For these cases, if the interface is not from Java language, we will modify
         // the codes of the interface. Otherwise, we will remove that interface completely.
 
-        // TODO: Update Specimin to generate a synthetic version for the missing parent class with
+        // TODO: Update specslice to generate a synthetic version for the missing parent class with
         // synthetic method implementations, particularly if the targeted method invokes a method
         // from the parent class that implements a method from a Java language interface.
         if (line.contains("not abstract and does not override abstract method")) {
@@ -212,7 +212,7 @@ class JavaTypeCorrect {
                 // this case does happen while reducing large projects - we saw
                 // it while reducing e.g. Apache Cassandra. It may still indicate
                 // a problem when we encounter it, but I'm not sure that it is:
-                // this may happen sometimes during intermediate stages of Specimin.
+                // this may happen sometimes during intermediate stages of specslice.
               }
             } else {
               // do nothing - we can't solve this case.
@@ -289,7 +289,7 @@ class JavaTypeCorrect {
 
   /**
    * All instances of the synthetic "incorrect type" will be replaced with the "correct type" in the
-   * output of Specimin. This method does handle cases where at least two different types need to be
+   * output of specslice. This method does handle cases where at least two different types need to be
    * matched (i.e., upper bounds), and should always be called rather than updating {@link
    * #typeToChange} directly.
    *

@@ -39,13 +39,13 @@ import org.checkerframework.checker.signature.qual.ClassGetSimpleName;
 import org.checkerframework.checker.signature.qual.FullyQualifiedName;
 import org.jetbrains.java.decompiler.main.decompiler.ConsoleDecompiler;
 
-/** This class is the main runner for Specimin. Use its main() method to start Specimin. */
+/** This class is the main runner for SpecSlice. Use its main() method to start SpecSlice. */
 public class SpecSliceRunner {
 
   /**
-   * The main entry point for Specimin.
+   * The main entry point for SpecSlice.
    *
-   * @param args the arguments to Specimin
+   * @param args the arguments to SpecSlice
    * @throws IOException if there is an exception
    */
   public static void main(String... args) throws IOException {
@@ -90,9 +90,9 @@ public class SpecSliceRunner {
   }
 
   /**
-   * This method acts as an API for users who want to incorporate Specimin as a library into their
+   * This method acts as an API for users who want to incorporate SpecSlice as a library into their
    * projects. It offers an easy way to do the minimization job without needing to directly call
-   * Specimin's main method.
+   * SpecSlice's main method.
    *
    * @param root The root directory of the input files.
    * @param targetFiles A list of files that contain the target methods.
@@ -211,7 +211,7 @@ public class SpecSliceRunner {
           parsedTargetFiles.put(targetFile, parseJavaFile(root, targetFile));
         } catch (ParseProblemException e) {
           // These parsing codes cause crashes in the CI. Those crashes can't be reproduced locally.
-          // Not sure if something is wrong with VineFlower or Specimin CI. Hence we keep these
+          // Not sure if something is wrong with VineFlower or SpecSlice CI. Hence we keep these
           // lines as tech debt.
           // TODO: Figure out why the CI is crashing.
           continue;
@@ -298,7 +298,7 @@ public class SpecSliceRunner {
     Map<String, Set<String>> unfoundMethods = finder.getUnfoundMethods();
     if (!unfoundMethods.isEmpty()) {
       throw new RuntimeException(
-          "Specimin could not locate the following target methods in the target files:\n"
+          "SpecSlice could not locate the following target methods in the target files:\n"
               + unfoundMethodsTable(unfoundMethods));
     }
     SolveMethodOverridingVisitor solveMethodOverridingVisitor =

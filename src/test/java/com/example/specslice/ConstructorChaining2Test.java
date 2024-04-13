@@ -4,7 +4,7 @@ import java.io.IOException;
 import org.junit.Test;
 
 /**
- * This test checks that Specimin preserves the right constructors in a constructor chain, but
+ * This test checks that SpecSlice preserves the right constructors in a constructor chain, but
  * doesn't preserve other things in those constructors (or their dependencies, etc).
  */
 public class ConstructorChaining2Test {

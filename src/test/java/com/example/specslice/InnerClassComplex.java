@@ -4,7 +4,7 @@ import java.io.IOException;
 import org.junit.Test;
 
 /**
- * This test checks that if Specimin will work properly where there are inner classes in the input
+ * This test checks that if SpecSlice will work properly where there are inner classes in the input
  * code. This variant is more complex, based on an inner class in
  * org.checkerframework.dataflow.analysis.AbstractAnalysis.
  */

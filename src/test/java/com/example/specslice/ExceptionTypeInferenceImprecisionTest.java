@@ -4,7 +4,7 @@ import java.io.IOException;
 import org.junit.Test;
 
 /**
- * This test demonstrates the imprecision of Specimin when there are type inference required to get
+ * This test demonstrates the imprecision of SpecSlice when there are type inference required to get
  * the type of an exception precisely.
  */
 public class ExceptionTypeInferenceImprecisionTest {

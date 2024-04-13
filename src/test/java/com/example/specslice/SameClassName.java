@@ -4,7 +4,7 @@ import java.io.IOException;
 import org.junit.Test;
 
 /**
- * This test checks that if Specimin will work properly where there are two classes with the same
+ * This test checks that if SpecSlice will work properly where there are two classes with the same
  * name
  */
 public class SameClassName {

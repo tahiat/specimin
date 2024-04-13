@@ -3,7 +3,7 @@ package com.example.specslice;
 import java.io.IOException;
 import org.junit.Test;
 
-/** This test checks if Specimin can handle simple generic type expressions. */
+/** This test checks if SpecSlice can handle simple generic type expressions. */
 public class GenericTypeTest {
   @Test
   public void runTest() throws IOException {

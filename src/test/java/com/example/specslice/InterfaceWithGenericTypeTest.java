@@ -3,7 +3,7 @@ package com.example.specslice;
 import java.io.IOException;
 import org.junit.Test;
 
-/** This test checks if Specimin can work for interfaces with generic types. */
+/** This test checks if SpecSlice can work for interfaces with generic types. */
 public class InterfaceWithGenericTypeTest {
   @Test
   public void runTest() throws IOException {

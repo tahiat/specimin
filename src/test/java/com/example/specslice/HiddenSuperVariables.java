@@ -4,9 +4,9 @@ import java.io.IOException;
 import org.junit.Test;
 
 /**
- * This test checks if Specimin can correctly differentiate between an unsolved field of the current
+ * This test checks if SpecSlice can correctly differentiate between an unsolved field of the current
  * class and an implicitly accessed super variable. Both scenarios may appear as unsolved NameExpr
- * instances in JavaParser. This test ensures that Specimin can correctly identify and handle these
+ * instances in JavaParser. This test ensures that SpecSlice can correctly identify and handle these
  * distinct cases.
  */
 public class HiddenSuperVariables {

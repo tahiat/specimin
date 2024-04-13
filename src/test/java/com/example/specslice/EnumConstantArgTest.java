@@ -4,7 +4,7 @@ import java.io.IOException;
 import org.junit.Test;
 
 /**
- * This test checks if Specimin correctly preserves things that are used as arguments to enum
+ * This test checks if SpecSlice correctly preserves things that are used as arguments to enum
  * constants.
  */
 public class EnumConstantArgTest {

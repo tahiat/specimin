@@ -4,7 +4,7 @@ import java.io.IOException;
 import org.junit.Test;
 
 /**
- * This test checks whether Specimin can handle a method from an interface that is implicitly
+ * This test checks whether SpecSlice can handle a method from an interface that is implicitly
  * invoked.
  */
 public class ImplicitInterfaceAccessTest {

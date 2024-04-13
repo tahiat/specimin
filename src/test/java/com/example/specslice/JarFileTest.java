@@ -3,7 +3,7 @@ package com.example.specslice;
 import java.io.IOException;
 import org.junit.Test;
 
-/** This test checks if Specimin can handle jar files as input */
+/** This test checks if SpecSlice can handle jar files as input */
 public class JarFileTest {
   @Test
   public void runTest() throws IOException {

@@ -4,7 +4,7 @@ import java.io.IOException;
 import org.junit.Test;
 
 /**
- * This test makes sure that Specimin will not modify existing class file in the input codebase when
+ * This test makes sure that SpecSlice will not modify existing class file in the input codebase when
  * dealing with a method with generic return type.
  */
 public class GenericTypeMethodTest {

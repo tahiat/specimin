@@ -4,7 +4,7 @@ import java.io.IOException;
 import org.junit.Test;
 
 /**
- * This test checks that if Specimin can correctly deduce that the return type of an unsolved method
+ * This test checks that if SpecSlice can correctly deduce that the return type of an unsolved method
  * that is used as an if or loop guard must be boolean.
  */
 public class BooleanReturnTest {

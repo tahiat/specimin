@@ -4,7 +4,7 @@ import java.io.IOException;
 import org.junit.Test;
 
 /**
- * This test checks whether Specimin can create synthetic class for an existing class that extends
+ * This test checks whether SpecSlice can create synthetic class for an existing class that extends
  * an unsolved class.
  */
 public class ExistingClassWithUnsolvedSuperClassTest {

@@ -3,7 +3,7 @@ package com.example.specslice;
 import java.io.IOException;
 import org.junit.Test;
 
-/** This test checks if Specimin can handle a field inside an enum constant declaration. */
+/** This test checks if SpecSlice can handle a field inside an enum constant declaration. */
 public class FieldInEnumTest {
   @Test
   public void runTest() throws IOException {

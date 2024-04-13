@@ -4,7 +4,7 @@ import java.io.IOException;
 import org.junit.Test;
 
 /**
- * This test checks that Specimin correctly preserves the signatures of methods used as methodrefs.
+ * This test checks that SpecSlice correctly preserves the signatures of methods used as methodrefs.
  * Based on an example from Apache Calcite.
  */
 public class MethodRefTest {

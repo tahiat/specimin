@@ -3,7 +3,7 @@ package com.example.specslice;
 import java.io.IOException;
 import org.junit.Test;
 
-/** This test checks if Specimin can recognize classes belonging the original codebase correctly. */
+/** This test checks if SpecSlice can recognize classes belonging the original codebase correctly. */
 public class ClassIsInOriginalCodebaseTest {
   @Test
   public void runTest() throws IOException {

@@ -3,7 +3,7 @@ package com.example.specslice;
 import java.io.IOException;
 import org.junit.Test;
 
-/** This test checks if Specimin can handle when the target class extends an inner class. */
+/** This test checks if SpecSlice can handle when the target class extends an inner class. */
 public class InnerClassUsageTest {
   @Test
   public void runTest() throws IOException {

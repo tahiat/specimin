@@ -5,7 +5,7 @@ import org.junit.Test;
 import java.io.IOException;
 
 /**
- * This test checks that if Specimin will work properly where there are innerclasses in the input code
+ * This test checks that if SpecSlice will work properly where there are innerclasses in the input code
  */
 public class InnerClass {
   @Test

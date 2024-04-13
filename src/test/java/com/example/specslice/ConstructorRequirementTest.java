@@ -4,7 +4,7 @@ import java.io.IOException;
 import org.junit.Test;
 
 /**
- * This test checks that Specimin will preserve constructors as needed to avoid compilation error.
+ * This test checks that SpecSlice will preserve constructors as needed to avoid compilation error.
  */
 public class ConstructorRequirementTest {
   @Test

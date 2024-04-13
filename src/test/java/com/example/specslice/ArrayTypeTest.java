@@ -4,7 +4,7 @@ import java.io.IOException;
 import org.junit.Test;
 
 /**
- * This test checks if Specimin will work for array types
+ * This test checks if SpecSlice will work for array types
  */
 public class ArrayTypeTest {
   @Test

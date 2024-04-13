@@ -4,7 +4,7 @@ import java.io.IOException;
 import org.junit.Test;
 
 /**
- * This test checks that Specimin will not get into an infinite loop if the name of an interface
+ * This test checks that SpecSlice will not get into an infinite loop if the name of an interface
  * appears more than one time in the interface declaration.
  */
 public class InterfaceReappearanceTest {

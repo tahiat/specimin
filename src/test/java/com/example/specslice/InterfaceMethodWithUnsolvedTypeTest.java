@@ -4,7 +4,7 @@ import java.io.IOException;
 import org.junit.Test;
 
 /**
- * This test makes sure that Specimin will not crash if methods from interfaces have unsolved return
+ * This test makes sure that SpecSlice will not crash if methods from interfaces have unsolved return
  * types.
  */
 public class InterfaceMethodWithUnsolvedTypeTest {

@@ -5,7 +5,7 @@ import org.junit.Test;
 import java.io.IOException;
 
 /**
- * This test checks if Specimin can handle constraint type.
+ * This test checks if SpecSlice can handle constraint type.
  */
 public class ConstraintTypeTest {
   @Test
