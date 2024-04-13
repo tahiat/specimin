@@ -1,9 +1,6 @@
 # SpecSlice: the specification slicer
 
-**Note: SpecSlice is a work in progress, and is not yet fully functional. Please check
-back later or contact the authors if you want to use the tool.**
-
-This document describes **SpecSlice** (SPECIfication MINimizer).
+This document describes **SpecSlice** (SPECIfication SLICEr).
 SpecSlice's goal is, given a Java Program *P*
 and a set of methods in that program *M*, produce a compilable, dependency-free
 version of *P* that contains (1) the body of each method in *M*
